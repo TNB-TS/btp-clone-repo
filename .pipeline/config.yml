@@ -21,7 +21,7 @@ stages:
     cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
     cfOrg: "mysubdomain"
     cfSpace: "dev"
-    cfCredentialsId: "deployonbtpcredentials"
+    cfCredentialsId: "deployonbtptnb"
     deployType: "standard"
     tmsUpload: false
 steps:
