@@ -1,0 +1,33 @@
+general:
+  buildTool: "mta"
+service:
+  buildToolVersion: "MBTJ11N18"
+  stages:
+    Release:
+      cfCredentialsId: "deployonbtptnb"
+stages:
+  Build:
+    mavenExecuteStaticCodeChecks: false
+    npmExecuteLint: false
+  Acceptance:
+    cloudFoundryDeploy: false
+    npmExecuteEndToEndTests: false
+  Malware Scan:
+    malwareExecuteScan: false
+  Release:
+    tmsExport: false
+    tmsUpload: false
+    cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
+    cfOrg: "T-Systems_International GmbH 2_tsi-sapbuild"
+    cfSpace: "dev"
+    deployType: "standard"
+    cloudFoundryDeploy: true
+  Additional Unit Tests:
+    npmExecuteScripts: false
+  Compliance:
+    sonarExecuteScan: false
+steps:
+  cloudFoundryDeploy:
+    mtaDeployParameters: "-f --version-rule ALL"
+  artifactPrepareVersion:
+    versioningType: "cloud_noTag"
