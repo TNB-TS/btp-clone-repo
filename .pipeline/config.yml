@@ -19,7 +19,7 @@ stages:
   Release:
     cloudFoundryDeploy: true
     cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
-    cfOrg: "mysubdomain"
+    cfOrg: "T-Systems_International GmbH 2_tsi-sapbuild"
     cfSpace: "dev"
     cfCredentialsId: "deployonbtptnb"
     deployType: "standard"
